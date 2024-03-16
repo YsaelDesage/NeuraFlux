@@ -1,0 +1,17 @@
+// Industrial Process MDP
+digraph {
+	"Low Production" [label="Low Production"]
+	"Low Production" -> "High Production" [label="Increase Output"]
+	"Low Production" -> Idle [label="Decrease Output"]
+	"Low Production" -> Broken [label=Breakdown style=dotted]
+	"High Production" [label="High Production"]
+	"High Production" -> "Low Production" [label="Decrease Output"]
+	"High Production" -> Broken [label=Breakdown style=dotted]
+	Maintenance [label=Maintenance]
+	Maintenance -> Idle [label="Increase Output"]
+	Broken [label=Broken]
+	Broken -> Maintenance [label=Repair]
+	Idle [label=Idle]
+	Idle -> "Low Production" [label="Increase Output"]
+	Idle -> Maintenance [label=Maintenance]
+}

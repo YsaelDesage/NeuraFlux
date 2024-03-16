@@ -1,0 +1,24 @@
+// Scenario Tree
+digraph {
+	4569426832 [label="Initial State
+" color=lightgrey fontsize=12 shape=diamond style=filled]
+	"4569426832_u1" [label=u1 color=black fontcolor=white fontsize=12 style=filled]
+	4569426832 -> "4569426832_u1" [label="" color=black]
+	"4569426832_u1" -> 4572000272 [color=black]
+	4572000272 [label="node 1
+Anticipated Cost: 10
+GHG Emissions: 20
+" color=lightgrey fontsize=12 shape=box style=solid]
+	"4569426832_u2" [label=u2 color=black fontcolor=white fontsize=12 style=filled]
+	4569426832 -> "4569426832_u2" [label="" color=red]
+	"4569426832_u2" -> 4569427216 [color=red]
+	4569427216 [label="Anticipated Cost: 200
+GHG Emissions: 40
+" color=red fontsize=12 shape=box style=solid]
+	"4569426832_u3" [label=u3 color=black fontcolor=white fontsize=12 style=filled]
+	4569426832 -> "4569426832_u3" [label="" color=black]
+	"4569426832_u3" -> 4569427152 [color=black]
+	4569427152 [label="Anticipated Cost: 40
+GHG Emissions: 60
+" color=lightgrey fontsize=12 shape=box style=solid]
+}

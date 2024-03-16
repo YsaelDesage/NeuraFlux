@@ -1,0 +1,70 @@
+// Detailed Operational Decision Graph
+digraph {
+	Initial [label="Initial State" shape=ellipse]
+	Seq1 [label="Seq1
+Profit: 769
+GHG: 245
+Energy: 460 
+Color: blue" color=lightgrey shape=box style=filled]
+	Seq2 [label="Seq2
+Profit: 798
+GHG: 230
+Energy: 404 
+Color: green" color=lightgrey shape=box style=filled]
+	Op1 [label="Op1
+GHG: 78
+Profit: 126
+Energy: 144"]
+	Op2 [label="Op2
+GHG: 90
+Profit: 375
+Energy: 157"]
+	Op1 -> Op2 [color=blue]
+	Op2 [label="Op2
+GHG: 90
+Profit: 375
+Energy: 157"]
+	Op4 [label="Op4
+GHG: 77
+Profit: 268
+Energy: 159"]
+	Op2 -> Op4 [color=blue]
+	Op4 [label="Op4
+GHG: 77
+Profit: 268
+Energy: 159"]
+	Op5 [label="Op5
+GHG: 64
+Profit: 359
+Energy: 119"]
+	Op4 -> Op5 [color=blue]
+	Initial -> Op1 [color=blue]
+	Op1 [label="Op1
+GHG: 78
+Profit: 126
+Energy: 144"]
+	Op3 [label="Op3
+GHG: 75
+Profit: 404
+Energy: 101"]
+	Op1 -> Op3 [color=green]
+	Op3 [label="Op3
+GHG: 75
+Profit: 404
+Energy: 101"]
+	Op4 [label="Op4
+GHG: 77
+Profit: 268
+Energy: 159"]
+	Op3 -> Op4 [color=green]
+	Op4 [label="Op4
+GHG: 77
+Profit: 268
+Energy: 159"]
+	Op5 [label="Op5
+GHG: 64
+Profit: 359
+Energy: 119"]
+	Op4 -> Op5 [color=green]
+	Initial -> Op1 [color=green]
+}
